@@ -1,0 +1,75 @@
+<html>
+<head>
+<link rel="stylesheet" href="./app.css">
+<script src="./app.js"></script>
+
+
+
+
+
+
+
+</head>
+<body onload="valid()">
+       <h1 align="center"> THE CALCUTAION OF<SPAN STYLE="text-decoration: underline double black;"> SUM</SPAN> AND <SPAN STYLE="text-decoration: underline double black;">GST</SPAN></h1>
+       <hr>
+<div align="center">
+<INPUT CLASS="feild" type="number" id="pid" placeholder="Enter your product id">
+<INPUT CLASS="feild" type="text" id="pnm" placeholder="Enter your product name"> 
+<select CLASS="feild" type="text" id="pcat">   
+ <option> Eelctronic</option> 
+ <option>  Fashion</option>
+ <option> Fitness</option> 
+ <option> Assoeries</option> 
+</select><br><br><br>
+<INPUT CLASS="feild" type="number" id="price" placeholder="Enter your product price"> 
+<INPUT CLASS="feild" type="number" id="pdis" placeholder="Enter your product discount(%)"> 
+<INPUT CLASS="feild" type="number" id="pgst" placeholder="Enter your product GST(%)">    
+</div>
+<center>
+<button class="btn1" onclick="sum()">SUM</button>&nbsp,&nbsp
+<button class="btn1" onclick="save()">SAVE</button>
+</center>
+<hr>
+<center>
+<table id="mytable"  border="4px" cellspacing="4" cellpading="2px">
+<thead>
+    <tr>
+<th> s.no</th>
+<th>product id</th>
+<th> product name</th>
+<th>product catagiese </th>
+<th> product price</th>
+<th>discont(%)</th>
+<th>GST(%)</th>
+<th>Net price</th>
+<th> Remove</th>
+</tr>
+
+
+</thead>
+
+<tbody id="tbody"></tbody>
+
+
+
+
+</table>
+</center>
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
