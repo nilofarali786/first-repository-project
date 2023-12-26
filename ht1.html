@@ -1,0 +1,127 @@
+
+<html>
+<head>
+
+<style>
+
+#para{ background-color: azure;
+
+   margin-left: 200px;
+   width: 600px;
+   height: 500px;
+ padding-left: 50px;
+ font-size: 30px;
+padding-top:30px ;
+
+
+}
+input[type=text]{
+
+ margin-left: 350px;
+ padding: 10px;
+ width: 200px;
+ color:blue
+
+}
+
+input[type=select]{
+
+margin-left: 350px;
+padding: 10px;
+width: 200px;
+color:blue
+
+}
+button{ background-color: blue;
+     padding: 10px;
+     width: 100px;
+     border-radius: 30px;
+     border: 2px double aqua;
+     color:aqua;
+
+
+
+}
+
+</style>
+
+
+
+
+
+
+</head>
+<body>
+ <input type="text"  id="inp"  placeholder=" inter your text">
+ <select id="sel">
+  <option value="-1">choose your style</option>
+<option  value="0">Bold</option>
+<option  value="1">italic</option>
+<option  value="2">underline</option>
+<option   value="3">heading</option>
+<option  value="4">linebreaking </option>
+<option  value="5">horizontal</option>
+
+
+
+ </select>
+ <button onclick=" add()"> Add text</button>
+ <p id="para"></p>
+ <script>
+
+   const arrytag=["b","i","u","h1","hr","br"]
+            console.log(arrytag)
+
+   function add(){
+
+          const input=document.getElementById("inp")
+          const select=document.getElementById("sel")
+          const para=document.getElementById("para")
+
+
+       const value=parseInt( select.value)
+       console.log(value)
+          const text=input.value
+        
+       if(value==-1){
+          
+        alert ("please choose your value")
+
+       }
+         
+        
+     else{
+            
+      if(value<4 &&  text.length==0){
+
+         alert("please fill your box")
+         return;
+      }
+      if(value<4){
+        
+     var  ob=document.createElement(arrytag[value])
+     console.log(ob)
+         ob.innerText=text
+         para.appendChild(ob)
+
+     }
+       
+
+
+   }
+
+  }
+
+ </script>
+ 
+</body>
+
+
+
+
+
+
+
+
+
+</html>
